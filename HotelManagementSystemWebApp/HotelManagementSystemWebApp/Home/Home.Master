@@ -1,0 +1,98 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Home.master.cs" Inherits="HotelManagementSystemWebApp.Home.Home" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="/Bootstrap 5.2/css/bootstrap.min.css" rel="stylesheet">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <img src="\Images\HotelLogo.png" height="37" width="38">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse"></div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a id="home_link" class="nav-link" aria-current="page" href="/Home/HomePage/HomePage.aspx">Home</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a id="booking_dropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Bookings
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a id="book_room" class="dropdown-item" href="/Home/Bookings/BookRoom.aspx">Book a room</a></li>
+                            <li><a id="all_bookings" class="dropdown-item" href="/Home/Bookings/AllBookings.aspx">All bookings</a></li>
+                            <li><a id="cancel_booking" class="dropdown-item" href="/Home/Bookings/CancelBookings.aspx">Cancel bookings</a></li>
+                            <li><a id="cancelled_booking" class="dropdown-item" href="/Home/Bookings/CancelledBookings.aspx">List of cancelled bookings</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li class="nav-item dropdown">
+                        <a id="guest_dropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Guests
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a id="check_in" class="dropdown-item" href="/Home/Guests/Check_in.aspx">Check-in Guests</a></li>
+                            <li><a id="list_of_guests" class="dropdown-item" href="/Home/Guests/Check_out.aspx">Check-out Guests</a></li>
+                            <li><a id="check_out_history" class="dropdown-item" href="/Home/Guests/CheckOutHistory.aspx">Check-out History</a></li>
+                            <li><a id="guest_info" class="dropdown-item" href="/Home/Guests/Guest_info.aspx">All Guests' Information</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a id="room" class="nav-link" aria-current="page" href="/Home/Rooms/Rooms.aspx">Room Info</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a id="employee_dropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Employees
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a id="view_employees" class="dropdown-item" href="/Home/Employees/ViewEmployees.aspx">View list of current employees</a></li>
+                            <li><a id="view_managers" class="dropdown-item" href="/Home/Employees/ViewManagers.aspx">View list of current managers</a></li>
+                            <li><a id="view_ex-employees" class="dropdown-item" href="/Home/Employees/ViewEx-Employees.aspx">View list of ex-employees</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a id="inventory" class="nav-link" aria-current="page" href="/Home/Reports/Inventory.aspx">Inventory</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a id="messages" class="nav-link" aria-current="page" href="/Home/Reports/Messages.aspx">Messages</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a id="user_settings_dropdown" runat="server" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
+                        <ul class="dropdown-menu">
+                            <li><a id="change_password" class="dropdown-item" href="/Home/UserSettings/ChangePassword.aspx">Change Password</a></li>
+                            <li><a id="delete_account" class="dropdown-item" href="/Home/UserSettings/DeleteAccount.aspx">Delete user account</a></li>
+                            <li><a class="dropdown-item" href="/AdminPanel/AdminPanel.aspx">Admin Panel</a></li>
+                            <li><a href="#" runat="server" class="dropdown-item" onServerClick="Log_outClick">Log-out</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <form id="form1" runat="server" action="#">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+    <script src="/Bootstrap 5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
