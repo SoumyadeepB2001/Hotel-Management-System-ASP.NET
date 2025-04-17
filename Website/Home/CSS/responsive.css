@@ -1,0 +1,249 @@
+@media (max-width: 1680px) {
+  header {
+    padding: 10px 4%;
+  }
+}
+
+@media (max-width: 1220px) {
+  :root {
+    --big-font: 3.6rem;
+    --h2-font: 2.6rem;
+    --p-font: 0.9rem;
+  }
+}
+
+@media (max-width: 1110px) {
+  #menu-icons {
+    display: block;
+  }
+  .navbar {
+    position: absolute;
+    top: -500px;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background: var(--bg-color);
+    box-shadow: 0 4px 4px rgb(0 0 0/10%);
+    transition: all ease 0.5s;
+  }
+  .navbar a {
+    display: block;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 5px 30px;
+    padding: 10px 0;
+  }
+  .navbar a::after {
+    display: none;
+  }
+  .navbar.open {
+    top: 100%;
+  }
+}
+/* ----------------------------------------------------------------------------------------------- */
+@media (max-width: 1199px) {
+  /* header */
+  /* .navbar-expand-lg .navbar-expand-lg {
+    align-items: center;
+  } */
+
+  /* .navbar-expand-lg .navbar-expand-lg .nav-link {
+    padding: 0;
+    font-size: 0.875rem;
+  } */
+
+  /* .user-pic {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 4px 5px;
+  } */
+
+  .main-btn {
+    font-size: 0.875rem;
+    padding: 0.475rem 0.6rem;
+  }
+
+  /* Booking Area */
+  .banner_wrapper {
+    height: 33.875rem;
+  }
+  .booking-area {
+    padding: 3rem 0.625rem;
+  }
+
+  .booking-area .main-btn {
+    padding-left: 0.3125rem !important;
+    padding-right: 0.3125rem !important;
+  }
+
+  /* room*/
+  .room .slide .content h3 {
+    font-size: 2.5rem;
+  }
+  .room .slide .content p {
+    font-size: 1.3rem;
+  }
+  .room .slide .content .stars i {
+    font-size: 1.8rem;
+  }
+  .room .slide .image .price {
+    font-size: 1.4rem;
+  }
+  .room .slide .image .fa-shopping-cart {
+    height: 3.5rem;
+    width: 3.5rem;
+    line-height: 3.5rem;
+    font-size: 1.5rem;
+  }
+  /* Services */
+}
+/* ----------------------------------------------------------------------------------------------- */
+
+@media (max-width: 995px) {
+  /* custom css */
+  section {
+    padding: 1.875rem 0;
+  }
+
+  /* Navbar */
+  /* .header-scrolled {
+    height: auto;
+  } */
+
+  /* .header_wrapper .menu-navbar-nav {
+    text-align: center;
+    padding-bottom: 0.9375rem;
+  } */
+  /* 
+  .header_wrapper .nav-item .nav-link {
+    margin-top: 0.9375rem;
+  } */
+
+  /* .user-pic {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 17px 5px;
+  } */
+
+  .main-btn {
+    font-size: 0.475rem;
+    padding: 0.475rem 0.2re;
+  }
+
+  /* banner wrapper */
+  .banner_wrapper {
+    height: 25.625rem;
+  }
+  .booking-area {
+    padding: 3.125rem 1.875rem;
+  }
+
+  /* About */
+  .about_wrapper {
+    padding-top: 22.75rem;
+  }
+  /* room*/
+  .room .slide .content h3 {
+    font-size: 2.5rem;
+  }
+  .room .slide .content p {
+    font-size: 1.3rem;
+  }
+  .room .slide .content .stars i {
+    font-size: 1.8rem;
+  }
+  .room .slide .image .price {
+    font-size: 1.4rem;
+  }
+  .room .slide .image .fa-shopping-cart {
+    height: 3.5rem;
+    width: 3.5rem;
+    line-height: 3.5rem;
+    font-size: 1.5rem;
+  }
+  /* Contact us */
+  .con {
+    background: #03a9f5;
+  }
+  .contactUS {
+    padding: 20px;
+  }
+  .box {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "form"
+      "info"
+      "map";
+  }
+  .formBox .row50 {
+    display: flex;
+    gap: 0;
+    flex-direction: column;
+  }
+  .inputBox {
+    width: 100%;
+  }
+  .contact {
+    padding: 30px;
+  }
+
+  .map {
+    min-height: 300px;
+    padding: 0;
+  }
+}
+
+/* ----------------------------------------------------------------------------------------------- */
+
+@media (max-width: 767px) {
+  /* custom css */
+  h1 {
+    font-size: 1.875rem;
+    line-height: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+    line-height: 2.187rem;
+  }
+  h5 {
+    font-size: 1.25rem;
+  }
+  p {
+    font-size: 0.8125rem;
+    line-height: 1.5rem;
+  }
+}
+@media (max-width: 500px) {
+  /* room*/
+  .room .slide .content h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .room .slide .content p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .room .slide .content .stars {
+    padding: 0.1rem 0;
+  }
+  .room .slide .image .price {
+    font-size: 1rem;
+  }
+  .room .slide .image .fa-shopping-cart {
+    height: 3rem;
+    width: 3rem;
+    line-height: 3rem;
+    font-size: 1rem;
+  }
+  .room .slide .content {
+    padding: 1.2rem;
+  }
+  /* footer */
+}

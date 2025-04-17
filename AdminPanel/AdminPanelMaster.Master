@@ -1,0 +1,85 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminPanelMaster.master.cs" Inherits="HotelManagementSystemWebApp.AdminPanel.AdminPanelMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="/Bootstrap 5.2/css/bootstrap.min.css" rel="stylesheet">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <!--ContentPlaceHolder1 is used to change the Menu bar heading-->
+            <a class="navbar-brand" href="#">Crystal Springs Hotel Admin Panel</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menu</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+
+                        <!--Takes back to homepage-->
+                        <li class="nav-item">
+                            <a id="admin_home" class="nav-link" aria-current="page" href="/AdminPanel/AdminPanel.aspx">Home</a>
+                        </li>
+
+                        <!--Room management dropdown-->
+                        <li id="room_dropdown" class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Room Management
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a id="room_info" class="dropdown-item" href="/AdminPanel/Room/Rooms.aspx">Add/Edit Room Info</a></li>
+                                <li><a id="bed_room_type" class="dropdown-item" href="/AdminPanel/Room/BedRoomType.aspx">Add/Edit Bed Types & Room Types</a></li>
+                            </ul>
+                        </li>
+
+                        <!--Employee management dropdown-->
+                        <li id="employee_dropdown" class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Employee Management
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a id="add_employee" class="dropdown-item" href="/AdminPanel/Employee/NewEmployee.aspx">Add Employee</a></li>
+                                <li><a id="edit_employee" class="dropdown-item" href="/AdminPanel/Employee/EditEmployeeInfo.aspx">Search/Update/Delete Employee Info</a></li>
+                                <li><a id="terminate" class="dropdown-item" href="/AdminPanel/Employee/TerminateEmployee.aspx">Terminate Employee</a></li>
+                                <li><a id="dept_des" class="dropdown-item" href="/AdminPanel/Employee/DepartmentsDesignations.aspx">Add/Edit Departments & Designations</a></li>                                
+                            </ul>
+                        </li>
+
+                        <!--User management dropdown-->
+                        <li id="user_dropdown" class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">User Management
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a id="add_user" class="dropdown-item" href="/AdminPanel/User/AddUser.aspx">Add User</a></li>
+                                <li><a id="edit_user" class="dropdown-item" href="/AdminPanel/User/EditUsers.aspx">Search/Update/Delete User</a></li>
+                            </ul>
+                        </li>
+
+                        <!--Return button-->
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="/Home/HomePage/HomePage.aspx">Return to main page</a>
+                        </li>
+
+                    </ul>
+                    <br />
+                    <br />
+                </div>
+            </div>
+        </div>
+    </nav>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+    <script src="/Bootstrap 5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
